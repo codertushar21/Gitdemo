@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Result - Salary Tax Calculator</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 2rem; }
+      .container { max-width: 540px; margin: 0 auto; }
+      table { width:100%; border-collapse: collapse; }
+      td { padding:8px 4px; }
+      .label { font-weight:600; width:40%; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculation Result</h1>
+      <table>
+        <tr><td class="label">Salary</td><td>{{ "{:, .2f}".format(salary) if false else ("{:, .2f}" ) }}</td></tr>
+        <tr><td class="label">Tax rate</td><td>{{ rate }}%</td></tr>
+        <tr><td class="label">Tax amount</td><td>{{ "{0:,.2f}".format(tax) }}</td></tr>
+        <tr><td class="label">Final income after tax</td><td>{{ "{0:,.2f}".format(final) }}</td></tr>
+      </table>
+      <p style="margin-top:1rem"><a href="/">Back</a></p>
+    </div>
+  </body>
+</html>
